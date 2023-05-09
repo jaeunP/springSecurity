@@ -10,6 +10,7 @@ spring:
     username: sa
     password:
 
+
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
@@ -21,6 +22,7 @@ spring:
     defer-datasource-initialization: true
 
 jwt:
+#  HS512 알고리즘을 사용하기 때문에 Secret Key는 64 Byte 이상이여야 된다
   header: Authorization
   secret: c2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtc2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQK
   token-validity-in-seconds: 86400
@@ -28,4 +30,4 @@ jwt:
 
 logging:
   level:
-    example.springSecurity: DEBUG
+    example: DEBUG
